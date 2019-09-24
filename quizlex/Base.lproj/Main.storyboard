@@ -11,7 +11,7 @@
         <!--Import-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizlex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImportViewController" customModule="quizlex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,17 +20,24 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-ZW-6Eg">
-                                        <rect key="frame" x="173.5" y="0.0" width="67" height="387"/>
+                                        <rect key="frame" x="173.5" y="0.0" width="67" height="258"/>
                                         <state key="normal" title="Clipboard"/>
                                         <connections>
                                             <segue destination="4Wz-V9-YQJ" kind="show" id="CJq-ge-WPh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq2-Bf-KHW">
-                                        <rect key="frame" x="180.5" y="387" width="53" height="387"/>
+                                        <rect key="frame" x="180.5" y="258" width="53" height="258"/>
                                         <state key="normal" title="API Call"/>
                                         <connections>
                                             <segue destination="Qcl-Bo-Cyw" kind="show" id="DAg-dZ-xVg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t31-0C-z89">
+                                        <rect key="frame" x="141" y="516" width="132" height="258"/>
+                                        <state key="normal" title="MATH 1554 LOCAL"/>
+                                        <connections>
+                                            <segue destination="hkL-U2-k21" kind="show" id="qk9-Hk-MwD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,6 +69,9 @@
                         <viewLayoutGuide key="safeArea" id="YYj-Mk-ySv"/>
                     </view>
                     <navigationItem key="navigationItem" title="API Call" id="AsZ-He-tdP"/>
+                    <connections>
+                        <segue destination="hkL-U2-k21" kind="show" id="qWP-Ve-mah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFp-Fy-HHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,10 +88,46 @@
                         <viewLayoutGuide key="safeArea" id="pHT-ZV-Eji"/>
                     </view>
                     <navigationItem key="navigationItem" title="Clipboard" id="B30-bf-zDm"/>
+                    <connections>
+                        <segue destination="hkL-U2-k21" kind="show" id="1Xs-pZ-nNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPQ-v0-Se0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1693" y="-304"/>
+        </scene>
+        <!--Cards View Controller-->
+        <scene sceneID="c6p-t1-Vdd">
+            <objects>
+                <viewController storyboardIdentifier="CardsViewController" id="hkL-U2-k21" customClass="CardsViewController" customModule="quizlex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azg-cf-a0t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-NO-Gfj" customClass="MTMathUILabel">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lmi-NO-Gfj" firstAttribute="top" secondItem="vxE-ox-cn1" secondAttribute="top" id="DAT-9V-s9q"/>
+                            <constraint firstItem="vxE-ox-cn1" firstAttribute="trailing" secondItem="lmi-NO-Gfj" secondAttribute="trailing" id="Opq-vO-RGA"/>
+                            <constraint firstItem="vxE-ox-cn1" firstAttribute="bottom" secondItem="lmi-NO-Gfj" secondAttribute="bottom" id="S8e-tP-rmh"/>
+                            <constraint firstItem="lmi-NO-Gfj" firstAttribute="leading" secondItem="vxE-ox-cn1" secondAttribute="leading" id="YbJ-qu-tlw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vxE-ox-cn1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bZV-iL-xlR"/>
+                    <connections>
+                        <outlet property="latexLabel" destination="lmi-NO-Gfj" id="NRq-Tl-q9B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swv-wB-hfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="-31"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hFC-14-ouo">
@@ -102,4 +148,7 @@
             <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qk9-Hk-MwD"/>
+    </inferredMetricsTieBreakers>
 </document>
