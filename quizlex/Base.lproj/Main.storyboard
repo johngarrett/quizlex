@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUW-Ez-YBL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Import-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizlex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7mP-0n-nRf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-ZW-6Eg">
+                                        <rect key="frame" x="173.5" y="0.0" width="67" height="387"/>
+                                        <state key="normal" title="Clipboard"/>
+                                        <connections>
+                                            <segue destination="4Wz-V9-YQJ" kind="show" id="CJq-ge-WPh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq2-Bf-KHW">
+                                        <rect key="frame" x="180.5" y="387" width="53" height="387"/>
+                                        <state key="normal" title="API Call"/>
+                                        <connections>
+                                            <segue destination="Qcl-Bo-Cyw" kind="show" id="DAg-dZ-xVg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7mP-0n-nRf" secondAttribute="bottom" id="8dr-yJ-Yv4"/>
+                            <constraint firstItem="7mP-0n-nRf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fy4-BZ-pGS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7mP-0n-nRf" secondAttribute="trailing" id="ow9-v2-1ew"/>
+                            <constraint firstItem="7mP-0n-nRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r7y-Vb-ekP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Import" id="P5C-eU-5Yr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="137.94642857142856"/>
+        </scene>
+        <!--API Call-->
+        <scene sceneID="VA9-ac-bLD">
+            <objects>
+                <viewController id="Qcl-Bo-Cyw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcL-nI-rEM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YYj-Mk-ySv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="API Call" id="AsZ-He-tdP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFp-Fy-HHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="420"/>
+        </scene>
+        <!--Clipboard-->
+        <scene sceneID="fj6-vm-qjD">
+            <objects>
+                <viewController id="4Wz-V9-YQJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UEb-NK-IfH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pHT-ZV-Eji"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clipboard" id="B30-bf-zDm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPQ-v0-Se0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="-304"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hFC-14-ouo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUW-Ez-YBL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BYg-KZ-3Wt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0ex-Jh-fL7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X4-87-rvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
